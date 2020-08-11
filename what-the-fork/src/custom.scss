@@ -1,6 +1,58 @@
 // Override default variables before the import
+
+
+
+// Your variable overrides
 $body-bg: #333;
-$body: #ccc;
-body { color : #ccc}
+$body-color: #ccc;
+$enable-gradients:true;
+$enable-shadows:true;
+$enable-transitions:true;
+$enable-grid-classes:true;
+$enable-print-styles:false;
+
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+
+@import '~bootstrap/scss/variables.scss';
+
+$body-color: #eee;
+// $theme-colors: (
+//   "primary": #0074d9,
+//   "danger": #ff4136
+// );
+
+
+
+// Optional
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+//@import "node_modules/bootstrap/scss/navbarheader";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/jumbotron";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/transitions";
+//@import "node_modules/bootstrap/scss/footer";
+
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/media";
+
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
+
+main { min-height: 400px;}
