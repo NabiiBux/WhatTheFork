@@ -1,11 +1,22 @@
+import { GithubCommit } from "./generated/githubcommits";
+import { GithubRepo } from "./generated/github";
+
+
+export interface githubMap {
+    repo: GithubRepo;
+    lastCommit?: GithubCommit;
+ }
+
 export interface AppState {
     isLoading: boolean;
-    base?: Fork;
-    forks?: Fork[];
+    baseUrl?: string;
+    base?: GithubRepo;
+    forks?: githubMap[];
 }
 
 export let DefaultAppState:AppState = {
-    isLoading:false
+    isLoading: false
+    //,baseUrl: ''
 };
 
 export interface Fork {
@@ -14,4 +25,6 @@ export interface Fork {
     commitsBehind?: number;
     LastUpdate?: Date;
     LastUpdateCommitId?:string;
+
+    LastCommit?: GithubCommit;
 }

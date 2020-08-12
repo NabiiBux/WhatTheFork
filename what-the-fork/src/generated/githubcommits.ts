@@ -17,6 +17,9 @@ export interface GithubCommit {
     author:       GithubCommitAuthor;
     committer:    GithubCommitAuthor;
     parents:      Parent[];
+
+    // added by me
+    branch_name : string; 
 }
 
 export interface GithubCommitAuthor {
